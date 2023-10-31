@@ -9,7 +9,7 @@
 2. **Fork the repository and clone the repository to your local machine:**
 
    ```shell
-   git clone https://github.com/YacineMK/Hollow--.git
+   git clone https://github.com/<your_github_username>/Hollow--.git
    ```
 
 3. **installing dependecies**
@@ -22,11 +22,21 @@
       ```
 
    3. **Arch**
+   for arch users, you have to create a virtual environement in order to able to install packages via `pip` .
+      ( if you don't have python installed make sure to run the following )
       ```shell
-      sudo pacman -S install python3
+      sudo pacman -Syu && pacman -S install python
       ```
       ```shell
-      python3 -m pip install raylib
+      python -m virtualenv .venv
+      ```
+      then simply activate it to be able to use it
+      ```shell
+      source .venv/bin/activate
+      ```
+      after that you will be able to run
+      ```shell
+      python -m pip install raylib
       ```
 
 4. **Run code**

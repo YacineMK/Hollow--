@@ -1,1 +1,21 @@
-sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay sifo gay 
+import { component$ , useSignal} from '@builder.io/qwik';
+
+export interface NavbarProps {
+
+}
+
+export const Navbar = component$<NavbarProps>(() => {
+  const links = ["Home" , "linkes" , "mami"];
+  const isopen = useSignal(false);
+  return (
+    <header class="flex h-[70px] bg-slate-600 justify-between items-center px-5">
+      <img class="w-[120px]" src='/qwik.png' />
+      <ul class="flex ">
+        {links.map((item, index) => (
+              <li class="px-4" key={index}>{item}</li>
+        ))}
+      </ul>
+      {isopen && <button>+</button>}
+    </header>
+  );
+});
